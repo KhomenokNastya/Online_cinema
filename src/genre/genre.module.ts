@@ -3,6 +3,7 @@ import { GenreController } from './genre.controller';
 import { GenreService } from './genre.service';
 import { TypegooseModule } from 'nestjs-typegoose'
 import { GenreModel } from './genre.model'
+import { MovieModule } from '../movie/movie.module'
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { GenreModel } from './genre.model'
           collection: 'Genre',
         },
       },
-    ])
+    ]),
+    MovieModule,
   ],
   controllers: [GenreController],
   providers: [GenreService]
