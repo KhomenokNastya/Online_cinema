@@ -4,6 +4,7 @@ import { UserModule } from 'src/user/user.module'
 import { MovieController } from './movie.controller'
 import { MovieModel } from './movie.model'
 import { MovieService } from './movie.service'
+import { TelegramModule } from '../telegram/telegram.module'
 
 @Module({
   controllers: [MovieController],
@@ -17,6 +18,7 @@ import { MovieService } from './movie.service'
       },
     ]),
     UserModule,
+    TelegramModule,
   ],
   providers: [MovieService],
   exports: [MovieService],
